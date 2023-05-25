@@ -15,5 +15,3 @@ def checkout(request):
 
 def base(request):
     return render(request, 'store/base.html')
-
-

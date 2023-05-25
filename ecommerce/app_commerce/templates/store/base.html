@@ -2,30 +2,35 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <title>Store</title>
+  </head>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img src="{% static 'images/store-icon.png' %}" width="50" height="50" >
-        </a>
-        
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#">Disabled</a>
-          </div>
+  <body>
+    <nav class="navbar">
+      <a class="navbar-brand" href="{% url 'store' %}">
+        <img src="{% static 'images/store-icon.png' %}" width="75" height="50" >
+      </a>
+    
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-links">
+          <a class="nav-item nav-link" href="{% url 'store' %}">Home</a>
+          <a class="nav-item nav-link" href="{% url 'cart' %}">Cart</a>
+          <a class="nav-item nav-link" href="{% url 'checkout' %}">Login</a>
         </div>
+      </div>
     </nav>
 
-</head>
-<body>
-    
-</body>
+    <div class="container">
+      {% block content %}
+   
+      {% endblock content %}
+    </div>
+
+  </body>
+
 </html>
