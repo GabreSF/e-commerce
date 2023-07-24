@@ -6,7 +6,7 @@
             {% for product in products %}
             <div class="col-lg-4">
                 <div class="card">
-                    <img class="card-image" src="{% static 'images/placeholder.png' %}">
+                    <img class="card-image" src="{{product.imageURL}}">
                     <div class="card-body">
                         <h6><strong>{{product.name}}</strong></h6>
                         <hr>
