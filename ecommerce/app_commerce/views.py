@@ -4,6 +4,7 @@ import json
 import datetime
 from .models import *
 from . utils import cookieCart, cartData, guestOrder
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 def store(request):
@@ -24,6 +25,7 @@ def cart(request):
 
     context = {'items': items, 'order':order, 'cartItems': cartItems}
     return render(request, 'store/cart.html', context)
+
 
 def checkout(request):
     
@@ -58,6 +60,7 @@ def updateItem(request):
 
     return JsonResponse('Item was added', safe=False)
 
+@csrf_exempt
 def processOrder(request):
     transaction_id = datetime.datetime.now().timestamp()
     data = json.loads(request.body)
