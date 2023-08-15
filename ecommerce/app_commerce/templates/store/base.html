@@ -62,12 +62,13 @@
     
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-links">
-          <a class="nav-item nav-link" href="{% url 'checkout' %}">checkout</a>
+          <a class="nav-item nav-link" href="{% url 'checkout' %}">
+            <button class="btn checkout-btn">Checkout</button>
+          </a>
           <a class="nav-item nav-link" href="{% url 'cart' %}">
             <img id="cart-icon" src="{% static 'images/cart.png' %}">
           </a>  
             <p id="cart-total">{{cartItems}}</p>
-          
           
         </div>
       </div>
