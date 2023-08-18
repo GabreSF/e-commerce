@@ -1,0 +1,364 @@
+body{
+	background-color: hsl(0, 0%, 98%);
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+	color:hsl(0, 0%, 0%);
+	font-family: 'Baloo 2', cursive;
+	
+}
+
+
+.box-element{
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+}
+
+.move-down{
+	margin-top: 80px;
+}
+
+.table{
+	margin-left: auto;
+}
+
+
+.thumbnail{
+	width: 100%;
+	height: 200px;
+	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+}
+
+.product{
+	border-radius: 0 0 4px 4px;
+}
+
+
+
+#cart-icon{
+	width:25px;
+	
+	margin-left: 15px;
+}
+
+#cart-total {
+	display: block;
+	text-align: center;
+	color: #fff;
+	background-color: red;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	border-radius: 50%;
+	font-size: 14px;
+	margin-top: -5px;
+  }
+  
+
+
+.col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12{	
+	margin-top: 10px;
+	flex: 0 0 25%;   
+	padding: 10px;
+	box-sizing: border-box;
+	background-color: #f2f2f2;
+	max-width: 100%; /* Limitar a largura máxima */
+  	
+}
+
+.btn{
+	border-radius: 10px;
+	background-color: #6cad6f; 
+  	border: none;
+  	color: white;
+  	padding: 15px 32px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+	cursor: pointer;
+	
+}
+
+.row-image{
+	width: 100px;
+	
+}
+
+.row{
+	display: flex;
+}
+
+.form-field{
+	width:250px;
+	display: inline-block;
+	padding: 5px;
+}
+
+
+
+
+.cart-row{
+	display: flex;
+    align-items: flex-stretch;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+
+}
+
+.quantity{
+	display: inline-block;
+	font-weight: 700;
+	padding-right:10px;
+	
+
+}
+
+.chg-quantity{
+	width: 12px;
+	cursor: pointer;
+	display: block;
+	margin-top: 5px;
+	transition:.1s;
+}
+
+.chg-quantity:hover{
+	opacity: .6;
+}
+
+
+.hidden{
+	display: none!important;
+}
+
+/* Estilizando o navbar */
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #42b8a8;
+	margin-top: 0px;
+  	margin-left: 0px;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	padding: 2px 3px;
+	box-shadow:  0 8px 16px rgba(0, 0, 0, 0.3);
+	z-index: 1;
+}
+.navbar::after { 
+	content: ''; /* Cria um pseudo-elemento para a sombra */  
+	position: absolute;
+	bottom: 0px; /* Posiciona a sombra abaixo do navbar */
+	left: 0;
+	width: 100%;
+	height: 5px; /* Altura da sombra */
+	box-shadow: inset 0 0 20px #42b8a8; /* Efeito de sombra */
+	
+}
+  
+  /* Estilizando os links na barra de navegação */
+.navbar-links {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.navbar-links a {
+	text-decoration: none; /* Remover sublinhado padrão */
+	color: #333; /* Cor do texto */
+}
+/* Limitar o tamanho das imagens e definir um tamanho máximo para as colunas */
+/* Defina o tamanho da grade e dos itens */
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px; /* Espaçamento entre as colunas */
+	margin: 0 20px 10px;
+	box-sizing: border-box;
+	padding-top: 80px;
+}
+  
+.grid-item {
+	background-color: #f2f2f2;
+	text-align: center;
+	box-sizing: border-box; /* Inclua o padding no tamanho total */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 8);
+}
+  
+.grid-item img {
+	max-width: 100%; /* Limitar o tamanho máximo das imagens */
+	height: 250px; /* Manter a proporção da imagem */
+}
+
+.checkout-button {
+    margin-right: 20px; /* Espaçamento entre o botão e outros elementos na navbar */
+}
+  
+.checkout-btn {
+    background-color: #6cad6f;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.checkout-btn:hover {
+    background-color: #5c9e5f;
+  }
+
+.checkout-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinhar as seções no topo */
+    padding: 20px;
+}
+
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 70px;
+    width: 100%; /* Ocupar a largura total */
+	margin-top: 20px;
+	margin: 20px auto;
+}
+
+.checkout-col {
+    margin-top: 40px; /* Ajuste o valor conforme necessário */
+}
+
+.checkout-form,
+.payment-section {
+    padding: 20px;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.payment-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 50vh; /* Ajuste a altura conforme necessário */
+    margin: 20px 0; /* Adicione um espaçamento superior e inferior */
+    padding: 20px;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.payment-title {
+    margin-bottom: 105px;
+    font-size: 24px;
+    text-align: center;
+	background-color: #42b8a8;
+    color: white;
+    padding: 10px;
+	width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.paypal-buttons {
+    display: flex;
+    justify-content: center;
+    padding: 20px 30px; /* Espaçamento ao redor dos botões */
+}
+
+/* Estilizando os botões do PayPal */
+.paypal-button {
+    padding: 15px 30px; /* Ajuste o tamanho dos botões aqui */
+    margin: 0 10px;
+    background-color: #009cde;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.paypal-button:hover {
+    background-color: #0072a8;
+}
+
+  /* Responsividade: Ajuste para uma coluna em telas menores */
+@media (max-width: 768px) {
+	.grid-container {
+	  grid-template-columns: repeat(1, 1fr); /* Uma coluna para telas menores */
+	}
+}
+
+/* Estilos gerais */
+
+/* Estilos para telas grandes */
+@media (min-width: 768px) {
+    .checkout-grid {
+        grid-template-columns: 1fr 1fr; /* Alterar para 2 colunas */
+    }
+    
+    .checkout-form {
+        padding: 40px; /* Maior espaçamento para telas grandes */
+    }
+    
+    .payment-section {
+        padding: 40px;
+    }
+}
+
+/* Estilos para telas médias */
+@media (max-width: 767px) {
+    .checkout-grid {
+        grid-template-columns: 1fr; /* Uma coluna para telas menores */
+    }
+    
+    .checkout-form, .payment-section {
+        padding: 20px; /* Menor espaçamento para telas menores */
+    }
+    
+    /* Ocultar elementos não essenciais */
+    .order-summary, .payment-options {
+        display: none;
+    }
+}
+
+/* Estilos para telas grandes */
+@media (min-width: 768px) {
+    .paypal-buttons {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0; /* Espaçamento ao redor dos botões */
+    }
+    
+    .paypal-button {
+        padding: 15px 30px; /* Ajuste o tamanho dos botões aqui */
+        margin: 0 10px;
+        font-size: 16px;
+    }
+}
+
+/* Estilos para telas médias e pequenas */
+@media (max-width: 767px) {
+    .paypal-buttons {
+        flex-direction: column; /* Alterar para layout de coluna */
+        align-items: center; /* Centralizar os botões verticalmente */
+        padding: 10px 0; /* Espaçamento menor para telas menores */
+    }
+    
+    .paypal-button {
+        padding: 10px 20px; /* Ajuste o tamanho dos botões aqui */
+        margin: 5px 0;
+        font-size: 14px;
+    }
+}
